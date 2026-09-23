@@ -1,4 +1,4 @@
-# Sustainable Investment Prompt Library for SFDR Article 8 & 9 Funds
+# Sustainable Investment Agent Workflow and Prompt Library for SFDR Article 8 & 9 Funds
 
 **Institutional-grade AI prompts for buy-side Sustainable Investment analysts running SFDR Article 8 and Article 9 global public equity strategies.**
 
