@@ -87,7 +87,7 @@ Built for a senior buy-side Sustainable Investment analyst operating across DM /
 
 ## How to read this library
 
-Each prompt follows a canonical **seven-block XML architecture**: `<role>`, `<context>`, `<inputs>`, `<task>`, `<reasoning>`, `<output_format>`, `<constraints>` + `<self_evaluation>`. Prompts use a **shared issuer + fund header** (defined once in Prompt 00) and a standard **four-tier confidence taxonomy** (`HIGH_CONFIDENCE`, `MEDIUM_CONFIDENCE`, `LOW_CONFIDENCE`, `UNVERIFIED`). Every analytical prompt includes a pre-mortem/red-team step, an anti-greenwashing check, an MNPI flag, the firm's no-advice disclaimer, and a self-evaluation rubric. Versioning convention: `esg.<category>.<function>.v<n>`.
+Generated XML prompts use an **eight-block XML architecture**: `<role>`, `<context>`, `<inputs>`, `<task>`, `<reasoning>`, `<output_format>`, `<constraints>` + `<self_evaluation>`. Prompts use a **shared issuer + fund header** (defined once in Prompt 00) and a standard **four-tier confidence taxonomy** (`HIGH_CONFIDENCE`, `MEDIUM_CONFIDENCE`, `LOW_CONFIDENCE`, `UNVERIFIED`). Every analytical prompt includes a pre-mortem/red-team step, an anti-greenwashing check, an MNPI flag, the firm's no-advice disclaimer, and a self-evaluation rubric. Versioning convention: `esg.<category>.<function>.v<n>`.
 
 **Category map (18 sections, 52 prompts):**
 
@@ -119,7 +119,7 @@ Each prompt follows a canonical **seven-block XML architecture**: `<role>`, `<co
 
 ### PROMPT 00 — Canonical issuer + fund header and house conventions (`esg.shared.header.v1`)
 
-**Purpose.** Every downstream prompt `{{imports}}` this header. It standardises the issuer identifier block, the fund-context block, and the compliance/output conventions. Also available as a standalone file at `library/PROMPT_HEADER.md` for pasting into Claude Project system instructions.
+**Purpose.** Every downstream prompt `{{imports}}` this header. It standardises the issuer identifier block, the fund-context block, and the compliance/output conventions. Also available as a standalone file at `PROMPT_HEADER.md` for pasting into Claude Project system instructions.
 
 ```xml
 <role>
