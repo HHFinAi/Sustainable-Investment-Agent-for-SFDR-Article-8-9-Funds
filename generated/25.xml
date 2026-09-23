@@ -1,0 +1,28 @@
+<prompt id="25" legal_review="NOT_COMPLETED">
+  <role>Support sustainable-investment research. Do not claim regulatory, legal or compliance sign-off.</role>
+  <context>Populate PROMPT_HEADER.md with actual issuer and fund information. Every legacy legal date, threshold and methodology claim in the task is UNVERIFIED until checked against a current authoritative source for the relevant jurisdiction and period.</context>
+  <inputs>Require issuer/fund identifiers, governing fund documents, source documents, analysis cutoff and applicable regulatory-register records. Mark missing inputs explicitly; never substitute zero or a guessed rule.</inputs>
+  <task>Generate a UK Stewardship Code-2020-compliant (Principles 9, 11) engagement log entry for a meeting on `{{date}}` with `{{issuer}}`. Required XML schema:
+
+```xml
+&lt;engagement_log&gt;
+  &lt;engagement_id/&gt; &lt;date/&gt; &lt;issuer_header/&gt; &lt;participants/&gt;
+  &lt;engagement_type&gt;{reactive|proactive|disclosure|thematic|collaborative}&lt;/engagement_type&gt;
+  &lt;collaborative_ref&gt;{CA100+|NA100|FAIRR|IAST-APAC|PRI-Advance|IIGCC|IPDD|None}&lt;/collaborative_ref&gt;
+  &lt;objectives&gt;
+    &lt;objective id="O1" topic="" target_outcome="" smart_criteria="" milestone_level="1-4"/&gt;
+  &lt;/objectives&gt;
+  &lt;discussion_summary/&gt;
+  &lt;outcomes&gt;
+    &lt;outcome objective_ref="O1" progress="committed|partial|none" evidence=""/&gt;
+  &lt;/outcomes&gt;
+  &lt;escalation_next_step/&gt; &lt;milestone_date/&gt; &lt;analyst/&gt;
+&lt;/engagement_log&gt;
+```
+
+Log must be auditable and support PRI RI DDQ and Stewardship Report aggregation.</task>
+  <reasoning>Provide an auditable summary of evidence, assumptions, conflicts, applicable scope, alternative interpretations and disconfirming facts. Do not treat a proposal as an operative requirement.</reasoning>
+  <output_format>Use the task-specific deliverable and append source IDs, dates, units, methodology versions, jurisdiction, missing inputs and review status. Unverified law-dependent conclusions must be REVIEW_REQUIRED, not a certified pass/fail.</output_format>
+  <constraints>Apply REGULATORY_REVIEW.md before relying on hard-coded source-task claims. Keep proposal, adoption, entry-into-force and application dates distinct. Do not fabricate evidence or affiliation, infer compliance from model confidence, or publish confidential inputs. Marketing/legal-facing outputs require qualified human review.</constraints>
+  <self_evaluation>Score grounding, numerical correctness, source support, completeness and uncertainty handling with brief reasons. Scores are subjective and uncalibrated. A material unsupported legal or numerical claim is a critical failure regardless of average score.</self_evaluation>
+</prompt>
