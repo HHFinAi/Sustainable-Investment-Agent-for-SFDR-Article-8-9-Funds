@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "records": [
+    {"id":"EU-SFDR","jurisdiction":"EU","instrument":"SFDR and associated implementing/delegated measures; verify current version and scope","source_url":"https://eur-lex.europa.eu/eli/reg/2019/2088/oj","status":"unverified","effective_date":null,"last_reviewed":null,"reviewed_by":null,"provision":null,"prompt_ids":["05","06","07","09","10","11","22","47"]},
+    {"id":"EU-TAXONOMY","jurisdiction":"EU","instrument":"EU Taxonomy and associated delegated acts; verify relevant activity and objective","source_url":"https://eur-lex.europa.eu/eli/reg/2020/852/oj","status":"unverified","effective_date":null,"last_reviewed":null,"reviewed_by":null,"provision":null,"prompt_ids":["08","09","47"]},
+    {"id":"UK-SDR","jurisdiction":"UK","instrument":"FCA sustainability disclosure, labels and anti-greenwashing requirements; source exact current provisions","source_url":"https://www.fca.org.uk/","status":"unverified","effective_date":null,"last_reviewed":null,"reviewed_by":null,"provision":null,"prompt_ids":["37","38","39","40","41","48"]},
+    {"id":"EU-REPORTING-DILIGENCE","jurisdiction":"EU","instrument":"CSRD/ESRS, CSDDD and EUDR; expand into separate versioned instrument records before use","source_url":"https://eur-lex.europa.eu/","status":"unverified","effective_date":null,"last_reviewed":null,"reviewed_by":null,"provision":null,"prompt_ids":["12","16","18","19","20","21"]},
+    {"id":"GLOBAL-METHODOLOGIES","jurisdiction":"Jurisdiction and voluntary-methodology scope must be established","instrument":"IFRS sustainability standards and task-specific climate/nature methodologies; expand source inventory","source_url":"https://www.ifrs.org/","status":"unverified","effective_date":null,"last_reviewed":null,"reviewed_by":null,"provision":null,"prompt_ids":["01","12","13","14","15","16","17","33","34","35","36","42","43","50"]},
+    {"id":"FR-ARTICLE29","jurisdiction":"France","instrument":"Article 29 LEC reporting; identify exact operative provisions and applicability","source_url":"https://www.legifrance.gouv.fr/","status":"unverified","effective_date":null,"last_reviewed":null,"reviewed_by":null,"provision":null,"prompt_ids":["49"]}
+  ]
+}
