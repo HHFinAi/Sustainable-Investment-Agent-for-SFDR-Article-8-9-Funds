@@ -1,6 +1,8 @@
 # GitHub Desktop Setup Guide
 
-A step-by-step walkthrough for publishing this library to GitHub using GitHub Desktop, including Git identity configuration, repository initialisation, publishing, and day-to-day update workflows.
+This library is already public at [HHFinAi/Sustainable-Investment-Agent-for-SFDR-Article-8-9-Funds](https://github.com/HHFinAi/Sustainable-Investment-Agent-for-SFDR-Article-8-9-Funds). For an existing clone, save or commit local work, use **Fetch origin** and **Pull origin**, then create a working branch before editing. Preserve `.git` and history; do not overwrite `.git`, recreate the remote or force-push to apply package updates.
+
+Parts One through Three below describe initial publication of a **separate new copy**. Use an unused repository name and choose visibility deliberately. For routine work on the existing repository, continue with Part Four after synchronizing your clone.
 
 ---
 
