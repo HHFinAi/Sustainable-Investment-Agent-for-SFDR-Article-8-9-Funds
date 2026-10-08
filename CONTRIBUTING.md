@@ -16,7 +16,7 @@ Thank you for considering a contribution. This library is actively maintained to
 
 ## Prompt schema template
 
-All contributions must follow the canonical seven-block XML architecture. Use this template when writing a new prompt:
+All contributions must follow the canonical eight-block XML architecture. Use this template when writing a new prompt:
 
 ````markdown
 ### PROMPT <NN> — <Title> (`esg.<category>.<function>.v<n>`)
@@ -87,7 +87,7 @@ Every contribution must:
 1. Fork the repository and create a feature branch named `prompt/<short-description>` or `fix/<short-description>`.
 2. Make your changes. Keep commits focused and use descriptive commit messages.
 3. Update `CHANGELOG.md` under `Upcoming (unreleased)` with a one-line entry.
-4. Update the prompt count and category table in `README.md` and `library/PROMPT_LIBRARY.md` if adding prompts.
+4. Update the prompt count and category table in `README.md` and `PROMPT_LIBRARY.md` if adding prompts.
 5. Open a pull request with a clear description of what changes and why. Link to the regulation or methodology document if the change is regulatory-driven.
 6. The maintainer will review within 2 weeks.
 
