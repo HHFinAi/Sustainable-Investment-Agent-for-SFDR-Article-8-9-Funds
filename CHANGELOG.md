@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-08 — Research completion and reproducibility
+
+- Corrected root-level paths across the README, prompt library, categories, contribution guide and GitHub Desktop instructions; fixed the XML block-count description.
+- Explained the plain prompt-library setup and removed an outdated personal-background and unverified credential paragraph.
+
 All notable changes to this library will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),

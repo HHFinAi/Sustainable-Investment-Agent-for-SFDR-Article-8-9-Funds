@@ -1,6 +1,6 @@
 # Prompt Categories Quick Reference
 
-One-line summaries for all 52 prompts grouped by category, for fast lookup when you don't need the full XML spec. Prompt IDs link to the full prompt in `library/PROMPT_LIBRARY.md`.
+One-line summaries for all 52 prompts grouped by category, for fast lookup when you don't need the full XML spec. Prompt IDs link to the full prompt in `PROMPT_LIBRARY.md`.
 
 ---
 

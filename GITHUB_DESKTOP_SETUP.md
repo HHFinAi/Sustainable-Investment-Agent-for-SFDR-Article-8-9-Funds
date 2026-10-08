@@ -22,23 +22,13 @@ GitHub Desktop will ask you to configure your name and email address for Git com
 
 Download or extract the library files to a location on your computer. A dedicated folder under your user directory works well, such as `Documents/sustainable-investment-sfdr-prompts` on Windows or `/Users/<yourname>/sustainable-investment-sfdr-prompts` on macOS.
 
-Verify that the folder contains all the required files and subfolders:
+The published layout keeps these files at the repository root:
 
-```
-sustainable-investment-sfdr-prompts/
-├── README.md
-├── LICENSE
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── .gitignore
-├── .gitattributes
-├── library/
-│   ├── PROMPT_LIBRARY.md
-│   └── PROMPT_HEADER.md
-└── docs/
-    ├── GITHUB_DESKTOP_SETUP.md
-    └── CATEGORIES.md
-```
+- [PROMPT_LIBRARY.md](PROMPT_LIBRARY.md) and [PROMPT_HEADER.md](PROMPT_HEADER.md).
+- [CATEGORIES.md](CATEGORIES.md) and [GITHUB_DESKTOP_SETUP.md](GITHUB_DESKTOP_SETUP.md).
+- [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md) and [LICENSE](LICENSE).
+
+To use the existing public repository, choose **File → Clone Repository → URL** and enter `https://github.com/HHFinAi/Sustainable-Investment-Agent-for-SFDR-Article-8-9-Funds`. Choose a local destination, then clone. Fetch and pull before editing; create a working branch and inspect the diff before committing. The initialization and publication instructions below apply only to a separate new copy, not to synchronizing the existing repository.
 
 ### Adding the Local Repository to GitHub Desktop
 
@@ -82,7 +72,7 @@ The README contains a Mermaid workflow diagram. Open the repository on GitHub an
 
 ### Verify TOC Anchor Links
 
-Open `library/PROMPT_LIBRARY.md` on GitHub. Click 3–4 of the deeper TOC links (e.g., PROMPT 22 with the controlled-company subheader, PROMPT 47 with the Annex IV/V parenthetical) to confirm they jump correctly. If any link 404s within the page, the fix is a one-character edit to that line's anchor in the TOC.
+Open `PROMPT_LIBRARY.md` on GitHub. Click 3–4 of the deeper TOC links (e.g., PROMPT 22 with the controlled-company subheader, PROMPT 47 with the Annex IV/V parenthetical) to confirm they jump correctly. If any link 404s within the page, the fix is a one-character edit to that line's anchor in the TOC.
 
 ### Add Topics
 
