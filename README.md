@@ -10,7 +10,7 @@ Version 1.0 · 52 prompts · 18 categories · Full SFDR + UK SDR workflow covera
 
 This library is a curated set of **52 prompts** engineered for the specific workflows of a buy-side Sustainable Investment analyst operating under SFDR Article 8 and Article 9, UK SDR, and Article 29 LEC. It codifies the analytical methodology expected at UK/EU-regulated asset managers running global public equity strategies — spanning pre-investment integration, binding-element testing, Sustainable Investment qualification, EU Taxonomy alignment, Principal Adverse Impact (PAI) assessment, climate and nature analytics, stewardship and proxy voting, impact measurement, controversy response, client reporting, RFP/DDQ workflows, and regulatory disclosure.
 
-The library is platform-agnostic. It works on Claude, ChatGPT, Gemini, and any frontier LLM with sufficient context for structured XML prompts. Every prompt is built on a canonical seven-block XML architecture with a shared issuer + fund header, a four-tier confidence taxonomy, mandatory anti-greenwashing and MNPI guardrails, and a self-evaluation rubric — the things that turn a generic LLM output into something a senior analyst can sign off into an IC memo, a SFDR Annex V, or a client's stewardship report.
+The library is platform-agnostic. It works on Claude, ChatGPT, Gemini, and any frontier LLM with sufficient context for structured XML prompts. Every prompt is built on a canonical eight-block XML architecture with a shared issuer + fund header, a four-tier confidence taxonomy, mandatory anti-greenwashing and MNPI guardrails, and a self-evaluation rubric — the things that turn a generic LLM output into something a senior analyst can sign off into an IC memo, a SFDR Annex V, or a client's stewardship report.
 
 ## Workflow Coverage
 
@@ -110,13 +110,13 @@ flowchart TD
 
 The repository is organised for immediate deployment. Every file is plain UTF-8 markdown with no binary dependencies.
 
-**`library/PROMPT_LIBRARY.md`** — the full 52-prompt library in a single file with navigable table of contents and anchor links. This is the primary working document; upload it as a Claude Project knowledge file or browse it as a reference.
+**[PROMPT_LIBRARY.md](PROMPT_LIBRARY.md)** — the full 52-prompt library in a single file with navigable table of contents and anchor links. This is the primary working document; upload it as a Claude Project knowledge file or browse it as a reference.
 
-**`library/PROMPT_HEADER.md`** — the canonical issuer + fund header (Prompt 00) extracted as a standalone file for persistent use. Paste into Claude Project system instructions, a Custom GPT's instructions field, or a Gemini Gem's persona so every downstream prompt inherits the header variables.
+**[PROMPT_HEADER.md](PROMPT_HEADER.md)** — the canonical issuer + fund header (Prompt 00) extracted as a standalone file for persistent use. Paste into Claude Project system instructions, a Custom GPT's instructions field, or a Gemini Gem's persona so every downstream prompt inherits the header variables.
 
-**`docs/GITHUB_DESKTOP_SETUP.md`** — step-by-step GitHub Desktop walkthrough covering Git identity configuration, repository initialisation, publishing, and day-to-day update workflows.
+**[GITHUB_DESKTOP_SETUP.md](GITHUB_DESKTOP_SETUP.md)** — step-by-step GitHub Desktop walkthrough covering Git identity configuration, repository initialisation, publishing, and day-to-day update workflows.
 
-**`docs/CATEGORIES.md`** — one-line summaries of all 52 prompts grouped by category, for fast lookup when you don't need the full XML spec.
+**[CATEGORIES.md](CATEGORIES.md)** — one-line summaries of all 52 prompts grouped by category, for fast lookup when you don't need the full XML spec.
 
 **`CHANGELOG.md`** — version history starting at v1.0.
 
@@ -156,7 +156,7 @@ The 52 prompts are organised into 18 categories covering the full buy-side Susta
 
 Four principles distinguish this library from generic ESG prompt templates.
 
-**Canonical seven-block XML architecture.** Every prompt uses the same structural skeleton: `<role>`, `<context>`, `<inputs>`, `<task>`, `<reasoning>`, `<output_format>`, `<constraints>`, `<self_evaluation>`. Outputs are predictable, parseable, and comparable across issuers.
+**Canonical eight-block XML architecture.** Every prompt uses the same structural skeleton: `<role>`, `<context>`, `<inputs>`, `<task>`, `<reasoning>`, `<output_format>`, `<constraints>`, `<self_evaluation>`. Outputs are predictable, parseable, and comparable across issuers.
 
 **Shared issuer + fund header.** Defined once in Prompt 00 and imported by all downstream prompts. Standardises the issuer identifier block (name, ticker, ISIN, FIGI, GICS, SASB SICS, country of risk, market cap, ownership type) and the fund context block (SFDR classification, intended SFDR 2.0 category, SDR label, benchmark, reference benchmark type, minimum SI%, minimum Taxonomy%). Prompts become portable across tickers, sectors, and regions without rewriting the header each time.
 
@@ -186,11 +186,13 @@ The library is built on (and explicitly cites) the current 2025–2026 regulator
 
 Three deployment patterns, progressively more invested.
 
-**1. Reference document.** Browse `library/PROMPT_LIBRARY.md` on GitHub, copy the prompt you need, populate the issuer + fund header variables from Prompt 00, and paste into Claude (or any LLM that handles XML-tagged prompts well). Easiest entry point, no setup required.
+**1. Reference document.** Browse [PROMPT_LIBRARY.md](PROMPT_LIBRARY.md) on GitHub, copy the prompt you need, populate the issuer + fund header variables from Prompt 00, and paste into Claude (or any LLM that handles XML-tagged prompts well). Easiest entry point, no setup required.
 
-**2. Claude Project knowledge.** Create a new Claude Project named e.g. "SFDR Analyst Workbench". Upload `library/PROMPT_HEADER.md` into the Project's system instructions so the canonical header is always active. Upload `library/PROMPT_LIBRARY.md` as a knowledge file. Then trigger prompts conversationally: *"Run prompt 12 (TCFD/IFRS S2) on Iberdrola"* or *"Apply prompt 22 (good governance) to Aramco with controlled-company overlay"*. Claude resolves the prompt ID against the library and applies it to the issuer. Best for daily analyst use.
+**2. Claude Project knowledge.** Create a new Claude Project named e.g. "SFDR Analyst Workbench". Upload `PROMPT_HEADER.md` into the Project's system instructions so the canonical header is always active. Upload `PROMPT_LIBRARY.md` as a knowledge file. Then trigger prompts conversationally: *"Run prompt 12 (TCFD/IFRS S2) on Iberdrola"* or *"Apply prompt 22 (good governance) to Aramco with controlled-company overlay"*. Claude resolves the prompt ID against the library and applies it to the issuer. Best for daily analyst use.
 
 **3. Slash commands (Claude Code).** Convert each prompt to a slash command by saving individual prompt blocks as `.md` files in `~/.claude/commands/sfdr/` with the prompt ID as filename (e.g. `esg.climate.tcfd_ifrss2.v2.md`). Then invoke as `/esg.climate.tcfd_ifrss2.v2` in Claude Code with the issuer header passed as arguments. Best for high-volume, repeat workflows.
+
+The files are located at the repository root. Clone the repository or download its source ZIP, preserve the adjacent header and library, and use [CATEGORIES.md](CATEGORIES.md) to find a prompt. There is no Python engine, packaged plugin installer or automatic document retrieval in this repository. Copying prompts into a chat does not enforce a state machine. Provider-specific setup depends on the host capabilities.
 
 Whichever pattern you choose, **always populate the canonical issuer + fund header from Prompt 00 first** — every downstream prompt assumes those variables are bound.
 
@@ -221,7 +223,7 @@ Prompt ID conventions (`esg.<category>.<function>.v<n>`) and self-evaluation rub
 
 ## Author
 
-**Ed** — London-based buy-side investment professional with ~8 years across responsible investment and equity research, including roles at The Global Fund (Geneva) and Baillie Gifford (Edinburgh). BSc Biomedicine, MSc Global Health, CFA charterholder + CFA ESG Certificate. Builds and publishes institutional-quality Claude skills and frameworks for investment workflows.
+**HHFinAi** publishes reusable sustainable investment research prompts and workflows. This repository documents the methodology and its limits; it does not certify analyst credentials or automated regulatory compliance.
 
 ## License
 
