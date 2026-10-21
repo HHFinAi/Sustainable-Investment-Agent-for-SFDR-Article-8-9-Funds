@@ -1,5 +1,7 @@
 # Sustainable Investment Agent Workflow and Prompt Library for SFDR Article 8 & 9 Funds
 
+> **Responsible AI:** Analyst-controlled research; verify evidence, disclose AI assistance and protect confidential information. [Policy and project-specific checks](RESPONSIBLE_AI.md).
+
 **Institutional-grade AI prompts for buy-side Sustainable Investment analysts running SFDR Article 8 and Article 9 global public equity strategies.**
 
 Version 1.0 · 52 prompts · 18 categories · Full SFDR + UK SDR workflow coverage · DM / EM / Frontier

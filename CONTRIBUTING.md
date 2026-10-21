@@ -98,3 +98,7 @@ Be professional. This is a practitioner community. Technical disagreement is wel
 ## Licensing of contributions
 
 By submitting a pull request, you agree that your contribution is licensed under the same Creative Commons Attribution 4.0 International (CC BY 4.0) licence as the rest of the library. You retain authorship credit.
+
+## Responsible AI contributions
+
+Follow [RESPONSIBLE_AI.md](RESPONSIBLE_AI.md). Disclose material AI assistance, source provenance, checks performed and unresolved limitations in the contribution. Verify citations and calculations; use public or synthetic examples without confidential or personal data. Describe relevant failure modes and preserve human-review boundaries. Do not claim human sign-off, validated accuracy or investment performance that the evidence does not establish.
